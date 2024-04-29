@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/ICO">
+        <file>ICO/speaker.ico</file>
+    </qresource>
+</RCC>
