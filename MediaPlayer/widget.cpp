@@ -37,10 +37,17 @@ Widget::~Widget()
 void Widget::on_pushButtonOpen_clicked()
 {
     QString file = QFileDialog::getOpenFileName(this, "Open file", NULL, "Audio files (*.mp3 *.flac)");
-    ui->labelFile->setText(file);
-    m_player->setMedia(QUrl::fromLocalFile(file));
-    m_player->play();
+    if (!file.isEmpty()) {
+        QFileInfo fileInfo(file);
+        QString fileName = fileInfo.baseName();
+        ui->labelFile->setText(fileName);
+        setWindowTitle(fileName);
+
+        m_player->setMedia(QUrl::fromLocalFile(file));
+        m_player->play();
+    }
 }
+
 
 
 void Widget::on_horizontalSliderVolume_valueChanged(int value)
@@ -54,5 +61,11 @@ void Widget::on_durationChanged(qint64 duration)
     ui->horizontalSliderProgress->setMaximum(duration);
     QTime qt_duration = QTime::fromMSecsSinceStartOfDay(duration);
     ui->labelDuration->setText(QString("Duration: ").append(qt_duration.toString(duration < 3600000 ? "mm:ss" : "hh:mm:ss")));
+}
+
+
+void Widget::on_labelFile_linkActivated(const QString &link)
+{
+
 }
 

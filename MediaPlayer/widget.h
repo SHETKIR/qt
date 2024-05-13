@@ -23,6 +23,8 @@ private slots:
 
     void on_durationChanged(qint64 duration);
 
+    void on_labelFile_linkActivated(const QString &link);
+
 private:
     Ui::Widget *ui;
 
