@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>571</width>
-    <height>244</height>
+    <height>384</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>571</width>
-    <height>244</height>
+    <height>384</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>571</width>
-    <height>244</height>
+    <height>384</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -111,7 +111,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>200</y>
+     <y>350</y>
      <width>80</width>
      <height>21</height>
     </rect>
@@ -194,6 +194,43 @@
     <string>Duration</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButtonMute">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>80</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mute</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableViewPlaylist">
+   <property name="geometry">
+    <rect>
+     <x>-5</x>
+     <y>170</y>
+     <width>581</width>
+     <height>221</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>labelFile</zorder>
+  <zorder>pushButtonPrev</zorder>
+  <zorder>pushButtonPlay</zorder>
+  <zorder>pushButtonPause</zorder>
+  <zorder>pushButtonStop</zorder>
+  <zorder>pushButtonNext</zorder>
+  <zorder>horizontalSliderVolume</zorder>
+  <zorder>labelVolume</zorder>
+  <zorder>horizontalSliderProgress</zorder>
+  <zorder>labelProgress</zorder>
+  <zorder>labelDuration</zorder>
+  <zorder>pushButtonMute</zorder>
+  <zorder>tableViewPlaylist</zorder>
+  <zorder>pushButtonOpen</zorder>
  </widget>
  <resources>
   <include location="Icons.qrc"/>
