@@ -217,6 +217,32 @@
     </rect>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButtonLoop">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>0</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Loop</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonShuffle">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>0</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Shuffle</string>
+   </property>
+  </widget>
   <zorder>labelFile</zorder>
   <zorder>pushButtonPrev</zorder>
   <zorder>pushButtonPlay</zorder>
@@ -231,6 +257,8 @@
   <zorder>pushButtonMute</zorder>
   <zorder>tableViewPlaylist</zorder>
   <zorder>pushButtonOpen</zorder>
+  <zorder>pushButtonLoop</zorder>
+  <zorder>pushButtonShuffle</zorder>
  </widget>
  <resources>
   <include location="Icons.qrc"/>

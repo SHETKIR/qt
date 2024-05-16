@@ -27,6 +27,9 @@ Widget::Widget(QWidget *parent)
 
     connect(m_player, &QMediaPlayer::durationChanged, this, &Widget::on_durationChanged);
     connect(m_player, &QMediaPlayer::positionChanged, this, &Widget::on_position_changed);
+    connect(ui->pushButtonLoop, &QPushButton::clicked, this, &Widget::on_pushButtonLoop_clicked);
+    connect(ui->horizontalSliderProgress, &QSlider::sliderMoved, this, &Widget::on_horizontalSliderProgress_sliderMoved);
+
 
 
     m_playlist_model = new QStandardItemModel(this);
@@ -88,4 +91,22 @@ void Widget::on_position_changed(qint64 position)
     ui->labelProgress->setText(QString("Progress: ").append(qt_position.toString(position < 3600000 ? "mm:ss" : "hh:mm:ss")));
 }
 
+
+
+void Widget::on_pushButtonShuffle_clicked()
+{
+
+}
+
+
+void Widget::on_pushButtonLoop_clicked()
+{
+
+}
+
+
+void Widget::on_horizontalSliderProgress_sliderMoved(int position)
+{
+    m_player->setPosition(position);
+}
 
